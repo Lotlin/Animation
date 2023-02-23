@@ -1,0 +1,95 @@
+@keyframes widthChange {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes ballAnimation {
+  0% {
+    top: 20%;
+    left: 0;
+  }
+  25% {
+    top: 90%;
+    left: 20%;
+    animation-timing-function: linear;
+  }
+  50% {
+    top: 70%;
+    left: 40%;
+  }
+  75% {
+    top: 90%;
+    left: 60%;
+  }
+  90% {
+    top: 80%;
+    left: 80%;
+  }
+  100% {
+    top: 90%;
+    left: 90%;
+  }
+}
+
+section {
+  padding: 30px 0;
+}
+
+.greenContainer {
+  margin: 0 auto;
+  width: 1000px;
+  height: 25px;
+  border: 1px solid green;
+}
+
+.greenIndicatorProperties {
+  max-width: 90%;
+  height: 25px;
+  background-color: #63fd09;
+}
+
+.greenIndicatorAnimation {
+  animation: widthChange 5s linear;
+}
+
+.yellowProperties {
+  width: 10%;
+  height: 30px;
+  background-color: #ecd004;
+}
+
+.yellowAnimation {
+  animation: widthChange 3s linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.yellowAnimation:hover {
+  animation-play-state: running;
+}
+
+.square {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 1px solid darkblue;
+}
+
+.ballProperties {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: darkblue;
+  border-radius: 50%;
+}
+
+.ballAnimation {
+  animation: ballAnimation 4s infinite;
+  animation-timing-function: linear;
+}
